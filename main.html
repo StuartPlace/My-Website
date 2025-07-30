@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stuart Place</title>
+    <link rel="stylesheet" href="style.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+<body>
+    <div id="birds"></div>
+    <div class="wrapper">
+        <header>
+            <section class="title">
+                <h1>Stuart Place</h1>
+                <h4>Software Engineer</h4>
+            </section>
+        </header>
+        <nav>
+            <ul class="nav-horizontal">
+                <li class="about"><a href="#about">About</a></li>
+                <li class="things_i've_done"><a href="#things">Things I've Done</a></li>
+                <li class="course work"><a href="#coursework">Course Work</a></li>
+                <li class="projects"><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="content">
+            <div class="column">  
+                <h2>About Me</h2>
+                <p>I am a second year QUT student seeking a summer internship to grow professionally 
+                and take the next step in my software development career. I am passionate about technology 
+                and solving complex problems through code and continuously expanding my skillset.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+        
+        <section id="things" class="content">
+            <div class="column">
+                <h2>Things I've done</h2>
+                <p>• ASD 2024 24 hr Capture the Flag</p>
+                <p>• AWSN Gold Coast Chapter all-day Capture the Flag</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+            
+        <section id="coursework" class="content">
+            <div class="column">  
+                <h2>CourseWork</h2>
+                <p>Software Development, Networks, Databases, AI, Cybersecurity, Enterprise Systems, Mathematics, Web Design, Mobile Apps, IoT and GUIs</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="projects" class="content">
+            <div class="column">  
+                <h2>JPaint</h2>
+                <p>• JPaint - Using Java I created a paint application that allows users to draw, erase, choose their colour of pen, clear their background and change the background colour. This project utilised Swing.</p>
+                <img class="image" src="res/JPaintGUI.png" style="width:100%"> 
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="content">
+            <div class="WIP">
+                <h1>WORK IN PROGRESS</h1>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <div id="waves"></div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            VANTA.WAVES({
+            el: "#waves",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x20c13
+                })
+            })
+
+        window.addEventListener("DOMContentLoaded", () => {
+            VANTA.BIRDS({
+            el: "#birds",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0x0,
+            color1: 0x3eff,
+            color2: 0x13ff00,
+            colorMode: "lerp",
+            birdSize: 1,
+            quantity: 8.00
+                })
+            })
+        </script>
+</body>
+</html>
